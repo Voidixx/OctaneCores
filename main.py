@@ -1,6 +1,7 @@
 import discord
 from discord.ext import commands, tasks
 import os
+from dotenv import load_dotenv  # ✅ Import dotenv
 import json
 import asyncio
 import random
@@ -9,6 +10,8 @@ from typing import Dict, List, Optional
 from dataclasses import dataclass, asdict
 from collections import defaultdict
 from flask import Flask, render_template
+
+load_dotenv()  # ✅ Load .env file
 
 # Bot Token
 TOKEN = os.getenv("BOT_TOKEN")
